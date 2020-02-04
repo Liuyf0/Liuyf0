@@ -16,7 +16,7 @@
 <meta property="og:description" content="1. 选择数据库使用USE,如:USE crashcourse;mysql显示结果为：Database changed显示可用数据库列表:SHOW DATABASES;   2. 检索数据 SELECT+FROM语句：用于单个列,多个列，*可检索所有列，如:SELECT * FROM products;   LIMIT：限制结果。LIMIT 5：不多于5行。LIMIT 4,5:返回从行4开始的5">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-02-04T11:55:32.000Z">
-<meta property="article:modified_time" content="2020-02-04T12:33:46.112Z">
+<meta property="article:modified_time" content="2020-02-04T13:35:41.958Z">
 <meta property="article:author" content="无双">
 <meta name="twitter:card" content="summary">
   
@@ -181,7 +181,15 @@
 <li>LIMIT：限制结果。<code>LIMIT 5</code>：不多于5行。<code>LIMIT 4,5</code>:返回从行4开始的5行（注意行0），等价<code>LIMIT 5 OFFSET 4</code>  </li>
 <li>ORDER BY：排序数据，默认升序，降序使用：DESC,如：<code>ORDER BY prod_price DESC， prod_name;</code>  </li>
 </ul>
-<h2 id="3-过滤数据"><a href="#3-过滤数据" class="headerlink" title="3. 过滤数据"></a>3. 过滤数据</h2>
+<h2 id="3-过滤数据"><a href="#3-过滤数据" class="headerlink" title="3. 过滤数据"></a>3. 过滤数据</h2><ul>
+<li>WHERE子句：不等于<code>&lt;&gt;</code>或<code>!=</code>，BETWEEN:在指定两个值之间，如：<code>WHERE prod_price BETWEEN 5 AND 10</code>  </li>
+<li>空值检查：<code>WHERE prod_price IS NULL</code> 结果包含<code>NULL</code>  </li>
+<li>AND OR IN ：<code>IN</code>与<code>OR</code>可以转换，<code>IN</code>一般比<code>OR</code>快  </li>
+<li>NOT：否定之后所跟任何条件</li>
+<li>通配符：%：任何字符出现任意次数(包括0次)<code>WHERE prod_name LIKE &#39;jet%&#39;</code>,&emsp;&emsp;_：匹配单个字符  </li>
+<li>正则表达式：匹配文本的特殊的串（字符集合）<code>WHERE prod_name REGEXP &#39;...&#39;</code>,使用BINARY区分大小写：<code>REGEXP BINARY</code>，使用OR匹配：<code>WHERE prod_name REGEXP &#39;1000|2000|3000&#39;</code>,匹配几个字符之一：<code>WHERE prod_name REGEXP &#39;[123] Ton&#39;</code>匹配1 Ton、2 Ton、3 Ton,等价<code>WHERE prod_name REGEXP &#39;[1-3] Ton&#39;</code>,字符否定<code>[^123] Ton</code>,匹配特殊字符：<code>WHERE prod_name REGEXP &#39;\\.&#39;</code></li>
+</ul>
+
       
 
       
