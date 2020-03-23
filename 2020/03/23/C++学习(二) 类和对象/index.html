@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="C++学习(二) 类和对象"><meta name="keywords" content=""><meta name="author" content="fan,2743357832@qq.com"><meta name="copyright" content="fan"><title>C++学习(二) 类和对象 | fanのblog</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 4.2.0"></head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="false"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-面向对象程序设计"><span class="toc-number">1.</span> <span class="toc-text">1.面向对象程序设计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-类和对象"><span class="toc-number">2.</span> <span class="toc-text">2.类和对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-类成员的可访问范围"><span class="toc-number">3.</span> <span class="toc-text">3.类成员的可访问范围</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-成员函数的重载及参数缺省"><span class="toc-number">4.</span> <span class="toc-text">4.成员函数的重载及参数缺省</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-构造函数"><span class="toc-number">5.</span> <span class="toc-text">5.构造函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-构造函数在数组中的使用"><span class="toc-number">6.</span> <span class="toc-text">6.构造函数在数组中的使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-复制构造函数"><span class="toc-number">7.</span> <span class="toc-text">7.复制构造函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-类型转换构造函数"><span class="toc-number">8.</span> <span class="toc-text">8.类型转换构造函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-析构函数"><span class="toc-number">9.</span> <span class="toc-text">9.析构函数</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">fan</div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">18</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">1</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://github.com/wu-shuan/image_store/raw/master/blog/111.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">fanのblog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">首页</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title">C++学习(二) 类和对象</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-03-23</time></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h2 id="1-面向对象程序设计"><a href="#1-面向对象程序设计" class="headerlink" title="1.面向对象程序设计"></a>1.面向对象程序设计</h2><ul>
+<li>面向对象的程序设计具有“抽象”，“封装”“继承”“多态” 四个基本特点。</li>
+</ul>
+<h2 id="2-类和对象"><a href="#2-类和对象" class="headerlink" title="2.类和对象"></a>2.类和对象</h2><ul>
+<li>通过类，可以定义变量。类定义出来的变量，也称为类的实例，就是我们所说的“对象” 。</li>
+<li>和结构变量一样，对象所占用的内存空间的大小，等于所有成员变量的大小之和。</li>
+<li>和结构变量一样，对象之间可以用 “=”进行赋值，但是不能用 “==”，“!=”，“&gt;”,“&lt;”“&gt;=”“&lt;=” 进行比较，除非这些运算符经过了“重载”</li>
+</ul>
+<h2 id="3-类成员的可访问范围"><a href="#3-类成员的可访问范围" class="headerlink" title="3.类成员的可访问范围"></a>3.类成员的可访问范围</h2><ul>
+<li><p>关键字：</p>
+<ul>
+<li>private: 私有成员，只能在成员函数内访问 </li>
+<li>public : 公有成员，可以在任何地方访问 </li>
+<li>protected: 保护成员</li>
+</ul>
+</li>
+<li><p>如过某个成员前面没有上述关键字，则缺省地被认为是私有成员。</p>
+</li>
+<li><p>在类的成员函数内部，能够访问： </p>
+<ul>
+<li>当前对象的全部属性、函数； </li>
+<li>同类其它对象的全部属性、函数。</li>
+</ul>
+</li>
+<li><p>在类的成员函数以外的地方，只能够访问该类对象的 公有成员。</p>
+<pre><code>class CEmployee  { 
+    private: 
+        char szName[30]; //名字         
+    public : 
+        int salary; //工资 
+        void setName(char * name); 
+        void getName(char * name); 
+        void averageSalary(CEmployee e1,CEmployee e2); 
+}; 
+void CEmployee::setName( char * name)  { 
+    strcpy( szName, name); //ok 
+} 
+void CEmployee::getName( char * name)  { 
+    strcpy( name,szName); //ok 
+}</code></pre></li>
+<li><p>用struct定义类</p>
+<pre><code>struct CEmployee  { 
+    char szName[30]; //公有!! 
+public : 
+    int salary; //工资 
+    void setName(char * name); 
+    void getName(char * name); 
+    void averageSalary(CEmployee e1,CEmployee e2); 
+}; </code></pre><p>和用”class”的唯一区别，就是未说明是公有还是私有的成员，就是公有。</p>
+</li>
+</ul>
+<h2 id="4-成员函数的重载及参数缺省"><a href="#4-成员函数的重载及参数缺省" class="headerlink" title="4.成员函数的重载及参数缺省"></a>4.成员函数的重载及参数缺省</h2><h2 id="5-构造函数"><a href="#5-构造函数" class="headerlink" title="5.构造函数"></a>5.构造函数</h2><ul>
+<li><p>成员函数的一种</p>
+<ul>
+<li>名字与类名相同，可以有参数，不能有返回值(void也不行)</li>
+<li>作用是对对象进行初始化，如给成员变量赋初值 </li>
+<li>如果定义类时没写构造函数，则编译器生成一个默认的无参数的构造函数 <ul>
+<li>默认构造函数无参数，不做任何操作</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>如果定义了构造函数，则编译器不生成默认的无参数的构造函数 </p>
+</li>
+<li><p>对象生成时构造函数自动被调用。对象一旦生成，就再也不能在其上执行构造函数  + 一个类可以有多个构造函数</p>
+<pre><code>class Complex { 
+    private : 
+        double real, imag; 
+    public: 
+        void Set( double r, double i); 
+}; //编译器自动生成默认构造函数
+
+Complex c1;  //默认构造函数被调用 
+Complex * pc = new Complex;  //默认构造函数被调用</code></pre></li>
+<li><pre><code>class Complex { 
+    private :
+        double real, imag;
+    public:
+        Complex( double r, double i = 0);
+}; 
+Complex::Complex( double r, double i) { 
+    real = r; imag = i; 
+} 
+Complex c1;  // error, 缺少构造函数的参数 
+Complex * pc = new Complex; // error, 没有参数 
+Complex c1(2); // OK 
+Complex c1(2,4), c2(3,5); 
+Complex * pc = new Complex(3,4);</code></pre></li>
+<li><p>构造函数最好是public的，private构造函数不能直接用来初始化对象。</p>
+</li>
+</ul>
+<h2 id="6-构造函数在数组中的使用"><a href="#6-构造函数在数组中的使用" class="headerlink" title="6.构造函数在数组中的使用"></a>6.构造函数在数组中的使用</h2><h2 id="7-复制构造函数"><a href="#7-复制构造函数" class="headerlink" title="7.复制构造函数"></a>7.复制构造函数</h2><ul>
+<li><p>只有一个参数,即对同类对象的引用。 </p>
+</li>
+<li><p>形如 X::X( X&amp; )或X::X(const X &amp;), 二者选一 后者能以常量对象作为参数 </p>
+</li>
+<li><p>如果没有定义复制构造函数，那么编译器生成默认复制构造函数。默认的复制构造函数完成复制功能。</p>
+</li>
+<li><p>如果定义的自己的复制构造函数，则默认的复制构造函数不存在。</p>
+<pre><code>class Complex { 
+    public :
+        double real,imag; 
+    Complex(){ } 
+    Complex( const Complex &amp; c ) { 
+        real = c.real; 
+        imag = c.imag; 
+        cout &lt;&lt; “Copy Constructor called”; 
+    }
+}; 
+Complex c1;   
+Complex c2(c1);//调用自己定义的复制构造函数，输出 Copy Constructor called </code></pre></li>
+<li><p>不允许有形如 X::X( X )的构造函数。</p>
+</li>
+<li><p>复制构造函数起作用的三种情况：</p>
+<ul>
+<li>当用一个对象去初始化同类的另一个对象时。</li>
+<li>如果某函数有一个参数是类A的对象，那么该函数被调用时，类A的复制构造函数将被调用。</li>
+<li>如果函数的返回值是类A的对象时，则函数返回时，A的复制构造函数被调用。</li>
+</ul>
+</li>
+</ul>
+<h2 id="8-类型转换构造函数"><a href="#8-类型转换构造函数" class="headerlink" title="8.类型转换构造函数"></a>8.类型转换构造函数</h2><ul>
+<li><p>定义转换构造函数的目的是实现类型的自动转换。 </p>
+</li>
+<li><p>只有一个参数，而且不是复制构造函数的构造函数，一般就可以看作是转换构造函数。 </p>
+</li>
+<li><p>当需要的时候，编译系统会自动调用转换构造函数，建立一个无名的临时对象(或临时变量)。</p>
+<pre><code>class Complex   { 
+    public:  
+        double  real, imag; 
+        Complex( int i)  {//类型转换构造函数 
+            cout &lt;&lt; &quot;IntConstructor called&quot; &lt;&lt; endl; 
+            real = i; imag = 0; 
+        } 
+        Complex(double r,double i) {real = r; imag = i; } 
+}; 
+int main () 
+{ 
+    Complex  c1(7,8); 
+    Complex  c2 = 12; 
+    c1 = 9; // 9被自动转换成一个临时Complex对象 
+    cout &lt;&lt; c1.real &lt;&lt; &quot;,&quot; &lt;&lt; c1.imag &lt;&lt; endl; 
+    return 0; 
+}</code></pre></li>
+<li><pre><code>class Complex   { 
+    public:  
+    double  real, imag; 
+    explicit Complex( int i)  {//显式类型转换构造函数 
+        cout &lt;&lt; &quot;IntConstructor called&quot; &lt;&lt; endl; 
+        real = i; imag = 0; 
+    } 
+    Complex(double r,double i) {real = r; imag = i;  } 
+}; 
+int main () { 
+    Complex  c1(7,8); 
+    Complex  c2 = Complex(12); 
+    c1 = 9; // error, 9不能被自动转换成一个临时Complex对象 
+    c1 = Complex(9) //ok 
+    cout &lt;&lt; c1.real &lt;&lt; &quot;,&quot; &lt;&lt; c1.imag &lt;&lt; endl; 
+    return 0; 
+}</code></pre></li>
+</ul>
+<h2 id="9-析构函数"><a href="#9-析构函数" class="headerlink" title="9.析构函数"></a>9.析构函数</h2><ul>
+<li>名字与类名相同，在前面加‘~’， 没有参数和返回值，一个类最多只能有一个析构函数。</li>
+<li>析构函数对象消亡时即自动被调用。可以定义析构函数来在对象消亡前做善后工作，比如释放分配的空间等。</li>
+<li>如果定义类时没写析构函数，则编译器生成缺省析构函数。缺省析构函数什么也不做。</li>
+<li>如果定义了析构函数，则编译器不生成缺省析构函数。</li>
+</ul>
+</div></article><div class="post-meta__tag-list"></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2020/03/23/c++%E6%80%8E%E6%A0%B7%E8%AF%BB%E5%85%A5%E7%A9%BA%E6%A0%BC%E4%B8%8E%E9%80%97%E5%8F%B7/"><i class="fa fa-chevron-left">  </i><span>c++空怎样读入空格与逗号</span></a></div><div class="next-post pull-right"><a href="/2020/03/21/Linux%E5%AD%A6%E4%B9%A0%E4%B9%8Bbash/"><span>Linux学习之bash shell</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://github.com/wu-shuan/image_store/raw/master/blog/111.jpg)"><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2020 By fan</div><div class="framework-info"><span>Driven - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/fireworks.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script></body></html>

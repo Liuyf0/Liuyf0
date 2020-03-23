@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="Linux学习之bash shell"><meta name="keywords" content=""><meta name="author" content="fan,2743357832@qq.com"><meta name="copyright" content="fan"><title>Linux学习之bash shell | fanのblog</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 4.2.0"></head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="false"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux支持的shell"><span class="toc-number">1.</span> <span class="toc-text">Linux支持的shell</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Shell的变量功能"><span class="toc-number">2.</span> <span class="toc-text">Shell的变量功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PS1提示符的设置"><span class="toc-number">3.</span> <span class="toc-text">PS1提示符的设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#export"><span class="toc-number">4.</span> <span class="toc-text">export</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bash下变量设定的规则"><span class="toc-number">5.</span> <span class="toc-text">bash下变量设定的规则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一些定义"><span class="toc-number">6.</span> <span class="toc-text">一些定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#变量键盘读取和声明变量"><span class="toc-number">7.</span> <span class="toc-text">变量键盘读取和声明变量</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">fan</div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">18</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">1</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://github.com/wu-shuan/image_store/raw/master/blog/111.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">fanのblog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">首页</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title">Linux学习之bash shell</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-03-21</time></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h2 id="Linux支持的shell"><a href="#Linux支持的shell" class="headerlink" title="Linux支持的shell"></a>Linux支持的shell</h2><ul>
+<li>Linux支持的shell在/etc/shells文件中</li>
+<li>Linux使用的版本称为Bourne Again SHell(bash)</li>
+<li>BASH主要优点<ul>
+<li>命令记忆能力</li>
+<li>档案比对补全功能</li>
+<li>命令别名设定功能（alias）</li>
+<li>作业控制、前台后台控制</li>
+<li>shell script的强大功能</li>
+<li>通配符</li>
+</ul>
+</li>
+<li>type [-ta] name <ul>
+<li>不加任何参数时，type显示出name是外部命令还是bash内置的命令</li>
+<li>-t:通过文字显示：file、alias、builtin</li>
+<li>-a:在PATH变量定义的路径中，列车所有含有name的命令，包含alias</li>
+</ul>
+</li>
+</ul>
+<h2 id="Shell的变量功能"><a href="#Shell的变量功能" class="headerlink" title="Shell的变量功能"></a>Shell的变量功能</h2><ul>
+<li>echo $变量名</li>
+<li>在Linux预设的情况中，使用大写的字母来设定的变量一般为系统预定义的变量</li>
+<li>env显示目前系统中主要的预定义环境变量内容</li>
+<li>set可以将环境变量和用户自定义变量显示出来</li>
+</ul>
+<h2 id="PS1提示符的设置"><a href="#PS1提示符的设置" class="headerlink" title="PS1提示符的设置"></a>PS1提示符的设置</h2><ul>
+<li>\d:代表日期，格式为星期 月 日</li>
+<li>\t:24小时格式显示时间，HH:MM:SS</li>
+<li>\A:24小时格式显示时间，HH:MM</li>
+<li>\T:12小时格式显示时间，HH:MM:SS</li>
+<li>\H:完整的主机名称</li>
+<li>\h:只取主机名称的第一个名字</li>
+<li>\u:当前账户名</li>
+<li>\v:bsah版本信息</li>
+<li>\W:只列出最后一个目录</li>
+<li>\w:完整工作目录</li>
+<li>#:执行的第几个命令</li>
+<li>$:root用户提示符是#,其他用户提示符是$</li>
+</ul>
+<h2 id="export"><a href="#export" class="headerlink" title="export"></a>export</h2><ul>
+<li>export:将用户自定义变量变为环境变量</li>
+<li>在启动shell的时候，系统给shell分配一块内存，用来存储系统环境变量</li>
+<li>export可以将用户自定义变量移动到该内存中</li>
+<li>当进入子shell时，子shell将父shell的系统环境变量读入到子shell的内存中</li>
+</ul>
+<h2 id="bash下变量设定的规则"><a href="#bash下变量设定的规则" class="headerlink" title="bash下变量设定的规则"></a>bash下变量设定的规则</h2><ul>
+<li>变量与变量内容以等号=来连结，等号两边不能直接接空格符</li>
+<li>变量名称只能是英文字母与数字，但是数字不能是开头字符</li>
+<li>若有空格符可以使用双引号或单引号来将变量内容结合起来，但要注意，双引号内的特殊字符可以保持原有变量特性，但是单引号内的特殊字符只是一般的字符</li>
+<li>转义字符\</li>
+<li>在一串指令时，如果还需要由其他指令提供的信息，可以使用quote [‘command’]</li>
+<li>若该变量为扩增变量内容时，则需要以双引号和$变量名称,比如：[PATH=”$PATH”:/home] 继续累加变量内容</li>
+<li>取消变量：[unset 变量名称]</li>
+</ul>
+<h2 id="一些定义"><a href="#一些定义" class="headerlink" title="一些定义"></a>一些定义</h2><ul>
+<li>语系文件的变量locate</li>
+<li>locate -a显示系统支持的所有语系</li>
+<li>改变系统支持的语系，可修改/etc/sysconfig/i18n</li>
+</ul>
+<h2 id="变量键盘读取和声明变量"><a href="#变量键盘读取和声明变量" class="headerlink" title="变量键盘读取和声明变量"></a>变量键盘读取和声明变量</h2><ul>
+<li>read [-pt] 变量<ul>
+<li>-p:后面可以接提示符</li>
+<li>-t:后面可以接秒数，限制等待的时间</li>
+</ul>
+</li>
+<li>declare/typeset [-airx] 变量<ul>
+<li>-a:声明的变量为数组</li>
+<li>-i:整数数字</li>
+<li>-r:变量为只读</li>
+<li>-x:变量变成系统环境变量</li>
+<li>数据：a[i]</li>
+</ul>
+</li>
+</ul>
+</div></article><div class="post-meta__tag-list"></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2020/03/23/C++%E5%AD%A6%E4%B9%A0(%E4%BA%8C)%20%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1/"><i class="fa fa-chevron-left">  </i><span>C++学习(二) 类和对象</span></a></div><div class="next-post pull-right"><a href="/2020/03/13/C++%E5%AD%A6%E4%B9%A0(%E4%B8%80)%20%E4%BB%8EC%E5%88%B0C++/"><span>C++学习(一) 从C到C++</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://github.com/wu-shuan/image_store/raw/master/blog/111.jpg)"><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2020 By fan</div><div class="framework-info"><span>Driven - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/fireworks.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script></body></html>
