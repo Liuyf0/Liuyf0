@@ -1,0 +1,51 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="数据库系统关系模型"><meta name="keywords" content=""><meta name="author" content="fan,2743357832@qq.com"><meta name="copyright" content="fan"><title>数据库系统关系模型 | fanのblog</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 4.2.0"></head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="false"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-基本概念"><span class="toc-number">1.</span> <span class="toc-text">1.基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-关系模型"><span class="toc-number">2.</span> <span class="toc-text">2.关系模型</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">fan</div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">19</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">1</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://github.com/wu-shuan/image_store/raw/master/blog/111.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">fanのblog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">首页</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/标签">标签</a><a class="site-page" href="/categories">Categories</a></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title">数据库系统关系模型</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-03-13</time></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h2 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1.基本概念"></a>1.基本概念</h2><ul>
+<li>数据库：有相互关联关系的表的集合。  </li>
+<li>数据模型<ul>
+<li>规定模式统一描述方式的模型，包括：数据结构、操作和约束</li>
+<li>数据模型是对模式本身结构的抽象，模式是对数据本身结构形式的抽象</li>
+</ul>
+</li>
+<li>三大经典数据模型：关系模型、层次模型、网状模型</li>
+</ul>
+<h2 id="2-关系模型"><a href="#2-关系模型" class="headerlink" title="2.关系模型"></a>2.关系模型</h2><ul>
+<li>标准的数据库语言(SQL语言)是建立在关系模型基础之上的, 数据库领域的众多理论也都是建立在关系模型基础之上的。</li>
+<li>形象地说，一个关系(relation)就是一个Table </li>
+<li>关系模型就是处理Table的，它由三个部分组成： <ul>
+<li>描述DB各种数据的基本结构形式(Table/Relation) </li>
+<li>描述Table与Table之间所可能发生的各种操作(关系运算) </li>
+<li>描述这些操作所应遵循的约束条件(完整性约束) </li>
+</ul>
+</li>
+<li>关系运算：关系代数和关系演算；关系演算：元组演算和域演算。 </li>
+<li>笛卡尔积：<ul>
+<li>一组域D1, D2,…, Dn的笛卡尔积为: D1×D2×…×Dn= { (d1, d2, …, dn) | di∈Di, i=1,…,n } </li>
+<li>笛卡尔积的每个元素(d1, d2, …, dn)称作一个n-元组</li>
+<li>笛卡尔积是由n个域形成的所有 可能的n-元组的集合</li>
+</ul>
+</li>
+<li>关系模式与关系：<ul>
+<li>同一关系模式下，可有很多的关系 </li>
+<li>关系模式是关系的结构, 关系是关系模式在某一时刻的数据 </li>
+<li>关系模式是稳定的；而关系是某一时刻的值，是随时间可能变化的</li>
+</ul>
+</li>
+<li>属性不可再分特性:又被称为关系第一范式</li>
+<li>候选码：关系中的一个属性组，其值能唯一标识一个元组，若从该属性组中去掉任何一个属性，它就不具有这一性质了，这样的属性组称作候选码</li>
+<li>主码：当有多个候选码时，可以选定一个作为主码</li>
+<li>包含在任何一个候选码中的属性被称作主属性，而其他属性被称作非主属性 </li>
+<li>外码：关系R中的一个属性组，它不是R的候选码，但它与另一个关系S的候选 码相对应，则称这个属性组为R的外码或外键。<br><img src="https://user-images.githubusercontent.com/59944050/78328954-ff88b800-75b2-11ea-80e0-6a9989c3e865.png" alt="关系模型"></li>
+</ul>
+</div></article><div class="post-meta__tag-list"></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2020/03/13/%E5%85%B3%E4%BA%8EC%E7%9A%84%E5%B0%8F%E7%9F%A5%E8%AF%86/"><i class="fa fa-chevron-left">  </i><span>关于C的小知识</span></a></div><div class="next-post pull-right"><a href="/2020/03/13/linux%E5%AD%A6%E4%B9%A0/"><span>linux学习</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://github.com/wu-shuan/image_store/raw/master/blog/111.jpg)"><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2020 By fan</div><div class="framework-info"><span>Driven - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/fireworks.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script></body></html>
