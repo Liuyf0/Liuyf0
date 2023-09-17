@@ -15,4 +15,9 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
+<!-- 1、Metrics（GitHub 信息统计） https://metrics.lecoq.io/embed?user=Liuyf0 -->
 ![Metrics](https://metrics.lecoq.io/Liuyf0?template=classic&base=header%2C%20activity%2C%20community%2C%20repositories%2C%20metadata&base.indepth=false&base.hireable=false&base.skip=false&config.timezone=Asia%2FShanghai)
+
+
+<!-- 2、GitHub Stats Card（GitHub 统计卡片） https://github.com/anuraghazra/github-readme-stats -->
+<div align="center"> <img height="137px" src="https://github-readme-stats.vercel.app/api?username=Liuyf0&hide_title=true&hide_border=true&show_icons=trueline_height=21&text_color=000&icon_color=000&bg_color=0,ea6161,ffc64d,fffc4d,52fa5a&theme=graywhite" /> </div>
