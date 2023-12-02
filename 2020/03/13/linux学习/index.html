@@ -1,0 +1,270 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="linux学习"><meta name="keywords" content=""><meta name="author" content="fan,2743357832@qq.com"><meta name="copyright" content="fan"><title>linux学习 | fanのblog</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 4.2.0"></head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="false"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#命令执行的方式"><span class="toc-number">1.</span> <span class="toc-text">命令执行的方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件权限与目录配置"><span class="toc-number">2.</span> <span class="toc-text">文件权限与目录配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-ls-al：列出所有文件包括隐藏文件。"><span class="toc-number">2.0.1.</span> <span class="toc-text">1. ls -al：列出所有文件包括隐藏文件。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-rwxrwx—"><span class="toc-number">2.0.2.</span> <span class="toc-text">2. -rwxrwx—</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-目录属性"><span class="toc-number">2.0.3.</span> <span class="toc-text">3. 目录属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-目录配置"><span class="toc-number">2.0.4.</span> <span class="toc-text">4. 目录配置</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux文件和目录管理"><span class="toc-number">3.</span> <span class="toc-text">Linux文件和目录管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-目录与路径"><span class="toc-number">3.0.1.</span> <span class="toc-text">1. 目录与路径</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-文件与目录管理"><span class="toc-number">3.0.2.</span> <span class="toc-text">2. 文件与目录管理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-查看档案内容"><span class="toc-number">3.0.3.</span> <span class="toc-text">3. 查看档案内容</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-文件与目录的默认权限与隐藏权限"><span class="toc-number">3.0.4.</span> <span class="toc-text">4. 文件与目录的默认权限与隐藏权限</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-文件特殊权限"><span class="toc-number">3.0.5.</span> <span class="toc-text">5. 文件特殊权限</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-搜寻文件或目录"><span class="toc-number">3.0.6.</span> <span class="toc-text">6.搜寻文件或目录</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux磁盘与文件系统管理"><span class="toc-number">4.</span> <span class="toc-text">Linux磁盘与文件系统管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-EXT2文件系统"><span class="toc-number">4.0.1.</span> <span class="toc-text">1. EXT2文件系统</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-文件系统的简单操作"><span class="toc-number">4.0.2.</span> <span class="toc-text">2. 文件系统的简单操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-磁盘的分割、格式化、检验与挂载"><span class="toc-number">4.0.3.</span> <span class="toc-text">3. 磁盘的分割、格式化、检验与挂载</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-设置启动载入"><span class="toc-number">4.0.4.</span> <span class="toc-text">4. 设置启动载入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-建立虚拟内存"><span class="toc-number">4.0.5.</span> <span class="toc-text">5. 建立虚拟内存</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文件的压缩与打包"><span class="toc-number">5.</span> <span class="toc-text">文件的压缩与打包</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-Linux常见的压缩文件的后缀"><span class="toc-number">5.0.1.</span> <span class="toc-text">1. Linux常见的压缩文件的后缀</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-compresse-dcr-文件或目录"><span class="toc-number">5.0.2.</span> <span class="toc-text">2. compresse [-dcr] 文件或目录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-gzip-zcat"><span class="toc-number">5.0.3.</span> <span class="toc-text">3. gzip,zcat</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-bzip2-bzcat"><span class="toc-number">5.0.4.</span> <span class="toc-text">4. bzip2,bzcat</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-tar"><span class="toc-number">5.0.5.</span> <span class="toc-text">5. tar</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-zip"><span class="toc-number">5.0.6.</span> <span class="toc-text">6. zip</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-zipinfo"><span class="toc-number">5.0.7.</span> <span class="toc-text">7. zipinfo</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-unzip"><span class="toc-number">5.0.8.</span> <span class="toc-text">8. unzip</span></a></li></ol></li></ol></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">fan</div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">22</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">1</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://github.com/wu-shuan/image_store/raw/master/blog/111.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">fanのblog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">首页</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/标签">标签</a><a class="site-page" href="/categories">Categories</a></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title">linux学习</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-03-13</time></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h2 id="命令执行的方式"><a href="#命令执行的方式" class="headerlink" title="命令执行的方式"></a>命令执行的方式</h2><ul>
+<li>command [-options] parameter1 parameter2 …  <ul>
+<li>[]实际并不存在，-加入为参数，如-h;–为完整参数名,如–help;使用\转义回车键，适用于命令过长。</li>
+</ul>
+</li>
+<li>bc:计算器命令</li>
+<li>tab键：连按两下补齐命令、文件</li>
+<li>在线帮助：man page和info page<ul>
+<li>1代表一般账号可用命令,8代表系统管理员常用命令,5代表系统配置文件格式 </li>
+</ul>
+</li>
+<li>关机命令<br>shutdown:-c 取消shutdown<br>reboot:等同于shutdown -r now  </li>
+<li>要取得终端支持的语言可执行echo $LANG或locale</li>
+</ul>
+<h2 id="文件权限与目录配置"><a href="#文件权限与目录配置" class="headerlink" title="文件权限与目录配置"></a>文件权限与目录配置</h2><h4 id="1-ls-al：列出所有文件包括隐藏文件。"><a href="#1-ls-al：列出所有文件包括隐藏文件。" class="headerlink" title="1. ls -al：列出所有文件包括隐藏文件。"></a>1. ls -al：列出所有文件包括隐藏文件。</h4><h4 id="2-rwxrwx—"><a href="#2-rwxrwx—" class="headerlink" title="2. -rwxrwx—"></a>2. -rwxrwx—</h4><ul>
+<li>第一个字符<ul>
+<li>d:目录</li>
+<li>-:文件</li>
+<li>l:链接文件</li>
+<li>b:设备文件里的可供存储的接口设备</li>
+<li>c:设备文件里的串行端口设备</li>
+</ul>
+</li>
+<li>第一组：文件所有者权限</li>
+<li>第二组：同用户组的权限</li>
+<li>第三组：其他非本用户组的权限</li>
+<li>修改属性与权限<ul>
+<li>chgrp:改变文件所属用户组</li>
+<li>chown:改变文件所有者</li>
+<li>chmod:改变文件的权限</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-目录属性"><a href="#3-目录属性" class="headerlink" title="3. 目录属性"></a>3. 目录属性</h4><ul>
+<li>r:具有读取目录结构列表的权限</li>
+<li>w:具有更改该目录结构列表的权限</li>
+<li>x：用户能否进入该目录成为工作目录</li>
+</ul>
+<h4 id="4-目录配置"><a href="#4-目录配置" class="headerlink" title="4. 目录配置"></a>4. 目录配置</h4><ul>
+<li>/etc:开机与系统数据文件均在这个目录之下</li>
+<li>/bin,/sbin,/usr/bin,/usr/sbin:这是系统预设的执行文件的放置目录</li>
+<li>/usr/local:这是系统预设的让你安装你后来升级的套件的目录</li>
+<li>/home：这个是系统将有账号的人的家目录设置的地方</li>
+<li>/var:www,ftp,db,mail,logmessages…</li>
+<li>/usr/share/man,/usr/local/man:这两个目录为放置各类套件说明档的地方</li>
+</ul>
+<h2 id="Linux文件和目录管理"><a href="#Linux文件和目录管理" class="headerlink" title="Linux文件和目录管理"></a>Linux文件和目录管理</h2><h4 id="1-目录与路径"><a href="#1-目录与路径" class="headerlink" title="1. 目录与路径"></a>1. 目录与路径</h4><ul>
+<li><p>目录 </p>
+<ul>
+<li>.代表当前所在目录</li>
+<li>..代表上层目录</li>
+<li>-表示前一个工作目录</li>
+<li>~代表home的目录</li>
+<li>~user代表user这个人的家目录</li>
+</ul>
+</li>
+<li><p>命令</p>
+<ul>
+<li>cd 变换目录</li>
+<li>pwd 当前目录</li>
+<li>mkdir 建立目录：-m,配置文件案的权限；-p,递归创建。</li>
+<li>rwdir 删除目录：仅能删除空目录；-p,递归删除。</li>
+<li>环境变量PATH：当执行一个指令时，系统会依照PATH定义的路径搜寻档案 </li>
+</ul>
+</li>
+</ul>
+<h4 id="2-文件与目录管理"><a href="#2-文件与目录管理" class="headerlink" title="2. 文件与目录管理"></a>2. 文件与目录管理</h4><ul>
+<li><p>查看文件与目录：ls</p>
+</li>
+<li><p>复制、删除、移动：cp、rm、mv</p>
+<ul>
+<li>cp:-a,相当于pdr;-p,使用文件属性非默认属性复制；-d,若为链接文件,复制链接文件属性非文件本身;-r,递归复制，用于目录。</li>
+<li>rm:-f,强制删除；-i,询问；-r,递归删除。</li>
+<li>mv:-f,强制移动不询问；-u,若目标文件已经存在且源文件比较新，才会更新；-i,若目标文件已经存在，就会询问是否覆盖。    </li>
+<li>basename,dirname</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-查看档案内容"><a href="#3-查看档案内容" class="headerlink" title="3. 查看档案内容"></a>3. 查看档案内容</h4><ul>
+<li>cat:由第一行开始显示档案内容<ul>
+<li>-n:显示行号</li>
+<li>-b:显示行号（仅非空白行）     </li>
+</ul>
+</li>
+<li>tac:由最后一行开始显示档案内容  </li>
+<li>nl:显示时输出行号  </li>
+<li>more：一页一页显示  </li>
+<li>less:类似more且可翻页  </li>
+<li>head、tail:只看头、尾几行    </li>
+<li>od:二进制显示  </li>
+<li>touch:修改文件时间与创建新文件<ul>
+<li>-a:修改访问时间atime</li>
+<li>-c:修改文件的时间状态时间</li>
+<li>-m:修改mtime修改时间 </li>
+</ul>
+</li>
+</ul>
+<h4 id="4-文件与目录的默认权限与隐藏权限"><a href="#4-文件与目录的默认权限与隐藏权限" class="headerlink" title="4. 文件与目录的默认权限与隐藏权限"></a>4. 文件与目录的默认权限与隐藏权限</h4><ul>
+<li>查看：umask,umask -S。</li>
+<li>改变文件隐藏属性:chattr [+-=][ASacdistu] 文件或目录<ul>
+<li>+-=：增加、减少、设定属性</li>
+<li>a:只能增加数据，不能删除修改数据，只有root才能这只这个属性</li>
+<li>i:不能删除、改变、设定链接也无法写入或新增数据，只有root才能这只这个属性</li>
+<li>显示文件隐藏属性：lsattr</li>
+</ul>
+</li>
+</ul>
+<h4 id="5-文件特殊权限"><a href="#5-文件特殊权限" class="headerlink" title="5. 文件特殊权限"></a>5. 文件特殊权限</h4><ul>
+<li>SUID:4、SGID:2  <ul>
+<li>SUID:会创建s权限，让一般用户在执行某些程序时，暂时具有该程序拥有者的权限，他是程序在执行过程中拥有文件拥有者的权限，因此，他仅用于二进制文件；对目录无效。</li>
+<li>Set GID:s的权限在用户组，就是Set GID。如果SGID用在二进制文件上，则不论用户是谁，在执行程序时，他的有效用户组将会变成该程序的用户组；如果SGID用在目录A上，则在A目录内所建的文件或目录的用户组，则会是次A目录的用户   </li>
+</ul>
+</li>
+<li>Sticky bit:1<ul>
+<li>只针对目录有效。SBit对目录的作用是：在具有SBit的目录下，用户若在该目录下具有wx权限，则当用户在该目录下建立文件或目录时，只有文件拥有者与root才有权利删除。</li>
+</ul>
+</li>
+<li>设置大小写区别：大写表空</li>
+<li>file:查看文件类型</li>
+</ul>
+<h4 id="6-搜寻文件或目录"><a href="#6-搜寻文件或目录" class="headerlink" title="6.搜寻文件或目录"></a>6.搜寻文件或目录</h4><ul>
+<li>which :查看可执行文件的位置<ul>
+<li>-a:将所有可找到的命令列出</li>
+</ul>
+</li>
+<li>whereis:查看文件的位置<ul>
+<li>-b:只找binary的文档</li>
+<li>-m:只找在说明文件manual路径下的文件</li>
+<li>-s:只找source来源文件</li>
+<li>-u：没有说明档的文件</li>
+</ul>
+</li>
+<li>locate: 配合数据库查看文件的位置<ul>
+<li>locate：依据/var/lib/mlocate内的数据库记载，找出用户输入的关键字文件名</li>
+<li>updatedb: 根据/etc/updatedb.conf的设置去查找系统硬盘内的文件名，并更新/var/lib/mlocate内的数据库文件。</li>
+</ul>
+</li>
+<li>find:实际搜寻硬盘去查询文件名称</li>
+</ul>
+<h2 id="Linux磁盘与文件系统管理"><a href="#Linux磁盘与文件系统管理" class="headerlink" title="Linux磁盘与文件系统管理"></a>Linux磁盘与文件系统管理</h2><h4 id="1-EXT2文件系统"><a href="#1-EXT2文件系统" class="headerlink" title="1. EXT2文件系统"></a>1. EXT2文件系统</h4><ul>
+<li>目录：在Linux ext2文件系统建立一个目录时，ext2文件系统给该目录一个inode和至少一个block。inode记录目录属性，块记录这个目录下文件或目录的相关性</li>
+<li>文件：ext2至少给文件分配一个inode和相对于该文件大小的块的数量</li>
+<li>inode：本身不记录文件名，仅记录文件的相关属性，文件名则记录在目录所属的块区域</li>
+<li>使用dumpe2fs查看inode等的信息     </li>
+<li>载入点：必须是一个目录，不能是一个文件</li>
+<li>Linux支持的文件系统查看：/proc/filesystems或/lib/modules/‘uname -r’/kernel/fs</li>
+<li>Linux文件系统运行：异步方式</li>
+</ul>
+<h4 id="2-文件系统的简单操作"><a href="#2-文件系统的简单操作" class="headerlink" title="2. 文件系统的简单操作"></a>2. 文件系统的简单操作</h4><ul>
+<li>df [-ahikHTm][目录或文件名]：显示系统当前磁盘的总容量、已使用容量和剩余容量<ul>
+<li>-a:列出所有文件系统</li>
+<li>-h:易读显示</li>
+<li>-i:以inode数量显示</li>
+</ul>
+</li>
+<li>du [-ahskm] 档案或目录名称：查看磁盘、目录的大小<ul>
+<li>-s:列出总量，而不列出每个目录占用的容量</li>
+</ul>
+</li>
+<li>ln [-sf] 来源文件 目标文件<ul>
+<li>-s:不加参数为hard link，-s为symbolic link</li>
+<li>-f:覆盖目标文件</li>
+<li>hard link:不能跨文件系统，不能连接到目录</li>
+</ul>
+</li>
+</ul>
+<h4 id="3-磁盘的分割、格式化、检验与挂载"><a href="#3-磁盘的分割、格式化、检验与挂载" class="headerlink" title="3. 磁盘的分割、格式化、检验与挂载"></a>3. 磁盘的分割、格式化、检验与挂载</h4><ul>
+<li>fdisk [-l] 装置名称<ul>
+<li>-l:输出后面接的设备所有的分区内容。若仅有fdisk -l时，则系统将会把整个系统内能够搜寻到的装置的分区全部列出来。</li>
+</ul>
+</li>
+<li>磁盘格式化 <ul>
+<li>mkfs [-t 文件系统格式] 设备文件名</li>
+<li>mke2fs [-b block大小] [-i block大小] [-L卷标] [-cj] 设备</li>
+</ul>
+</li>
+<li>磁盘检验<ul>
+<li>fsck [-AtCary] 装置名称：系统出现极大的问题，导致你在Linux开机的时候进入单人单机模式下进行维护的行为时，才使用fsck；被检查的partition务必不可挂载到系统上，即在卸载的状态下进行检查</li>
+<li>badblocks -[svw] 装置名称 </li>
+<li>sync:将系统暂存在内存中的数据回存写入磁盘当中</li>
+</ul>
+</li>
+<li>磁盘挂载与卸载<ul>
+<li>mount [-tonL] 装置名称代号 挂载点<ul>
+<li>-a:依照/etc/fstab的内容将所有相关的磁盘都挂上来</li>
+<li>…<h4 id="4-设置启动载入"><a href="#4-设置启动载入" class="headerlink" title="4. 设置启动载入"></a>4. 设置启动载入</h4>…</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="5-建立虚拟内存"><a href="#5-建立虚拟内存" class="headerlink" title="5. 建立虚拟内存"></a>5. 建立虚拟内存</h4><p>…</p>
+<h2 id="文件的压缩与打包"><a href="#文件的压缩与打包" class="headerlink" title="文件的压缩与打包"></a>文件的压缩与打包</h2><h4 id="1-Linux常见的压缩文件的后缀"><a href="#1-Linux常见的压缩文件的后缀" class="headerlink" title="1. Linux常见的压缩文件的后缀"></a>1. Linux常见的压缩文件的后缀</h4><ul>
+<li>*.Z   compress程序压缩的文件</li>
+<li>*.bz2  bzip2程序压缩的文件</li>
+<li>*.gz  gzip程序压缩的文件</li>
+<li>*.tar  tar程序打包的数据，没有压缩</li>
+<li>*.tar.gz或tgz  tar程序打包并经过gzip压缩的文件</li>
+<li>*.tar.bz2  tar程序打包并经过bzip2压缩的文件</li>
+<li>*.zip  使用zip压缩</li>
+<li>*.rar  使用rar压缩</li>
+</ul>
+<h4 id="2-compresse-dcr-文件或目录"><a href="#2-compresse-dcr-文件或目录" class="headerlink" title="2. compresse [-dcr] 文件或目录"></a>2. compresse [-dcr] 文件或目录</h4><ul>
+<li>-d:解压缩</li>
+<li>-r:连同目录下的文件同时压缩</li>
+<li>-c:将压缩数据输出为标准输出（输出到屏幕）</li>
+</ul>
+<h4 id="3-gzip-zcat"><a href="#3-gzip-zcat" class="headerlink" title="3. gzip,zcat"></a>3. gzip,zcat</h4><ul>
+<li>-c，-d，-t：可以用来检验一个压缩文件的一致性，看文件有无错误</li>
+<li>-#：压缩等级，1最不好，9最好，6为默认。</li>
+</ul>
+<h4 id="4-bzip2-bzcat"><a href="#4-bzip2-bzcat" class="headerlink" title="4. bzip2,bzcat"></a>4. bzip2,bzcat</h4><ul>
+<li>-c，-d，-#，-z:压缩的意思</li>
+<li>bzcat file.bz2:读取file的内容</li>
+<li>.bz,.bz2,.tb2,.tbz2都可以使用bzip2解压缩</li>
+</ul>
+<h4 id="5-tar"><a href="#5-tar" class="headerlink" title="5. tar"></a>5. tar</h4><ul>
+<li>-z:是否同时具有gzip的属性</li>
+<li>-j:是否同时具有bzip2的属性</li>
+<li>-x:揭开一个压缩文件的参数命令</li>
+<li>-t:查看tarfile里面的文件</li>
+<li>-c:创建一个解压缩文件的命令</li>
+<li>-v:压缩的过程中显示文件</li>
+<li>-f:使用文件名，在f后立即接文件名</li>
+<li>-p:使用原文件的原来属性（属性不会依据以后改变）</li>
+<li>-P:可以使用绝对路径</li>
+<li>–exclude FILE：在压缩的过程中，不要将FILE打包</li>
+</ul>
+<h4 id="6-zip"><a href="#6-zip" class="headerlink" title="6. zip"></a>6. zip</h4><ul>
+<li>zip [AdFmrSuz#] 目标文件名 源文件名</li>
+<li>-A：调整可执行的自动解压缩文件</li>
+<li>-d：从压缩文件中删除指定的文件</li>
+<li>-F：尝试修复已损坏的压缩文件</li>
+<li>-m：将文件压缩并加入压缩文件后，删除原始文件，即把文件移动到压缩文件中</li>
+<li>-r：递归处理</li>
+<li>-S：包含系统和隐藏文件</li>
+<li>-u：更换较新的文件到压缩文件内</li>
+<li>-z：替压缩文件加上注释</li>
+<li>-#</li>
+</ul>
+<h4 id="7-zipinfo"><a href="#7-zipinfo" class="headerlink" title="7. zipinfo"></a>7. zipinfo</h4><ul>
+<li>zipinfo [-lhMtz] [压缩文件][文件…]</li>
+<li>-l:只列出文件名</li>
+<li>-h:只列出压缩文件的名称</li>
+<li>-M:若信息内容超过一个画面，则采用类似more指令的方式列出来</li>
+<li>-t:只列出压缩文件内所包含的文件数目，压缩前后的文件大小及压缩率</li>
+<li>-z:如果压缩文件内有注释，就将注释显示出来</li>
+</ul>
+<h4 id="8-unzip"><a href="#8-unzip" class="headerlink" title="8. unzip"></a>8. unzip</h4><ul>
+<li>unzip [-ltvMP] [.zip][文件][-d目录]</li>
+<li>-l:显示压缩文件内所包含的文件</li>
+<li>-t:检查文件是否正确</li>
+<li>-v:显示执行时的详细信息</li>
+<li>-M:将输出的结果送到more程序处理</li>
+<li>-P&lt;密码&gt;：使用zip密码选项</li>
+</ul>
+</div></article><div class="post-meta__tag-list"></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2020/03/13/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%9E%8B/"><i class="fa fa-chevron-left">  </i><span>数据库系统关系模型</span></a></div><div class="next-post pull-right"><a href="/2020/02/22/cmd%E5%91%BD%E4%BB%A4/"><span>cmd命令</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://github.com/wu-shuan/image_store/raw/master/blog/111.jpg)"><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2020 By fan</div><div class="framework-info"><span>Driven - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/fireworks.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script></body></html>

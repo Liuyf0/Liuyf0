@@ -1,0 +1,76 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="数据库系统SQL语言"><meta name="keywords" content=""><meta name="author" content="fan,2743357832@qq.com"><meta name="copyright" content="fan"><title>数据库系统SQL语言 | fanのblog</title><link rel="shortcut icon" href="/melody-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.7.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script><meta name="generator" content="Hexo 4.2.0"></head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="false"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-SQL语言基础"><span class="toc-number">1.</span> <span class="toc-text">1.SQL语言基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-复杂查询与视图"><span class="toc-number">2.</span> <span class="toc-text">2.复杂查询与视图</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">fan</div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">22</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">1</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://github.com/wu-shuan/image_store/raw/master/blog/111.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">fanのblog</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">首页</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/标签">标签</a><a class="site-page" href="/categories">Categories</a></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title">数据库系统SQL语言</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2020-04-05</time></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><h2 id="1-SQL语言基础"><a href="#1-SQL语言基础" class="headerlink" title="1.SQL语言基础"></a>1.SQL语言基础</h2><ul>
+<li>创建Database ：<ul>
+<li>create database 数据库名;</li>
+</ul>
+</li>
+<li>创建Table ：<ul>
+<li>Create table 表名( 列名 数据类型 [Primary key Primary key |Unique][Not null] [,列名 数据类型 [Not null], …]);</li>
+<li>“[ ] ”表示其括起的内容可以省略，“| ”表示其隔开的两项可取其一</li>
+</ul>
+</li>
+<li>向表中追加元组 ：<ul>
+<li>insert into 表名[(列名[, 列名]…] values (值[, 值] , …);</li>
+<li>values后面值的排列，须与into子句后面的列名排列一致 </li>
+<li>若表名后的所有列名省略，则values后的值的排列，须与该表存储中的列名排列一致</li>
+</ul>
+</li>
+<li>模糊查询问题：<ul>
+<li>列名 [not] ] like “字符串” </li>
+<li>“%”   匹配零个或多个字符 </li>
+<li>“_”   匹配任意单个字符 </li>
+<li>“\”   转义字符，用于去掉一些特殊字符的特定含义，使其被作为普通字符看待, 如用“%”去匹配字符%，用_ 去匹配字符_</li>
+</ul>
+</li>
+<li>元组删除Delete命令: 删除满足指定条件的元组 <ul>
+<li>Delete From 表名 [Where 条件表达式]; </li>
+<li>如果Where条件省略，则删除所有的元组。</li>
+</ul>
+</li>
+<li>元组更新Update命令: 用指定要求的值更新指定表中满足指定条件的 <ul>
+<li>Update 表名 Set 列名= 表达式 | (子查询)  [[ , 列名= 表达式 | (子查询)] …] [Where 条件表达式]; </li>
+<li>如果Where条件省略，则更新所有的元组。</li>
+</ul>
+</li>
+<li>修正数据库：修正数据库的定义，主要是修正表的定义<ul>
+<li>alter table tablename </li>
+<li>[add  {colname datatype, …}]    增加新列 </li>
+<li>[drop {完整性约束名}]            除完整性约束 </li>
+<li>[modify {colnamedatatype, …}]   修改列定义</li>
+</ul>
+</li>
+<li>撤消基本表：drop table 表名</li>
+<li>撤消数据库：drop database 数据库名; </li>
+<li>指定当前数据库： use数据库名; </li>
+<li>关闭当前数据库： close 数据库名; </li>
+</ul>
+<h2 id="2-复杂查询与视图"><a href="#2-复杂查询与视图" class="headerlink" title="2.复杂查询与视图"></a>2.复杂查询与视图</h2><ul>
+<li>(NOT)IN子查询<ul>
+<li>子查询：出现在Where子句中的Select语句被称为子查询(subquery) ,子 查询返回了一个集合，可以通过与这个集合的比较来确定另一个查询集合。</li>
+<li>基本语法：表达式 [not] in (子查询)</li>
+<li>非相关子查询：内层查询独立进行，没有涉及任何外层查询相关信息的子查询 </li>
+<li>相关子查询：内层查询需要依靠外层查询的某些参量作为限定条件才能进行的子查询，外层向内层传递的参量需要使用外层的表名或表别名来限定</li>
+<li>示例：求学过001号课程的同学的姓名 </li>
+</ul>
+</li>
+</ul>
+<pre><code>Select Sname 
+From Student Stud 
+Where S# in ( Select S# 
+              From SC 
+              Where S# = Stud.S# and C# = ‘001’) ; </code></pre><ul>
+<li>注意：相关子查询只能由外层向内层传递参数，而不能反之；这也称为变量的作用域原则</li>
+</ul>
+</div></article><div class="post-meta__tag-list"></div><nav id="pagination"><div class="prev-post pull-left"><a href="/2020/04/05/Linux%E5%AD%A6%E4%B9%A0%E4%B9%8Bshell-script/"><i class="fa fa-chevron-left">  </i><span>Linux学习之shell script</span></a></div><div class="next-post pull-right"><a href="/2020/04/04/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%85%B3%E7%B3%BB%E6%BC%94%E7%AE%97/"><span>数据库系统关系演算</span><i class="fa fa-chevron-right"></i></a></div></nav></div></div><footer class="footer-bg" style="background-image: url(https://github.com/wu-shuan/image_store/raw/master/blog/111.jpg)"><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2020 By fan</div><div class="framework-info"><span>Driven - </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a href="https://github.com/Molunerfinn/hexo-theme-melody" target="_blank" rel="noopener"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.7.0"></script><script src="/js/fancybox.js?version=1.7.0"></script><script src="/js/sidebar.js?version=1.7.0"></script><script src="/js/copy.js?version=1.7.0"></script><script src="/js/fireworks.js?version=1.7.0"></script><script src="/js/transition.js?version=1.7.0"></script><script src="/js/scroll.js?version=1.7.0"></script><script src="/js/head.js?version=1.7.0"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script></body></html>
