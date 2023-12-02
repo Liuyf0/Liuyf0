@@ -25,37 +25,27 @@ Here are some ideas to get you started:
  
 **Languages and Frameworks**
 
-<code><img height="20" src="iamge/cpp.png" alt="C++" title="C++"></code>
-<code><img height="20" src="iamge/python.png" alt="Python" title="Python"></code>
-<code><img height="20" src="iamge/json.png" alt="JSON" title="JSON"></code>
-<code><img height="20" src="iamge/git.png" alt="Git" title="Git"></code>
-<code><img height="20" src="iamge/SQLite.png" alt="SQLite" title="SQLite"></code>
-<code><img height="20" src="iamge/mongodb.png" alt="MongoDB" title="mongodb"></code>
-<code><img height="20" src="iamge/Djongo.png" alt="Djongo" title="Djongo"></code>
-<code><img height="20" width="22" src="iamge/Qt.png" alt="Qt" title="Qt"></code>
-<code><img height="20" src="iamge/docker.png" alt="Docker" title="Docker"></code>
-<code><img height="20" src="iamge/pytorch-logo.png" alt="PyTorch" title="PyTorch"></code>
-<code><img height="20" src="iamge/tensorflow.png" alt="TensorFlow" title="TensorFlow"></code>
+<code><img height="20" src="image/cpp.png" alt="C++" title="C++"></code>
+<code><img height="20" src="image/python.png" alt="Python" title="Python"></code>
+<code><img height="20" src="image/json.png" alt="JSON" title="JSON"></code>
+<code><img height="20" src="image/git.png" alt="Git" title="Git"></code>
+<code><img height="20" src="image/SQLite.png" alt="SQLite" title="SQLite"></code>
+<code><img height="20" src="image/mongodb.png" alt="MongoDB" title="mongodb"></code>
+<code><img height="20" src="image/Djongo.png" alt="Djongo" title="Djongo"></code>
+<code><img height="20" width="22" src="image/Qt.png" alt="Qt" title="Qt"></code>
+<code><img height="20" src="image/docker.png" alt="Docker" title="Docker"></code>
+<code><img height="20" src="image/pytorch-logo.png" alt="PyTorch" title="PyTorch"></code>
+<code><img height="20" src="image/tensorflow.png" alt="TensorFlow" title="TensorFlow"></code>
 
 **Tools and Environments**
 
-<code><img height="20" src="iamge/visual-studio-code.png" alt="VSCode" title="VSCode"></code>
-<code><img height="20" src="iamge/ARM-keil.png" alt="ARM-Keil" title="ARM-Keil"></code>
-<code><img height="20" src="iamge/PyCharm.png" alt="PyCharm" title="PyCharm"></code>
-<code><img height="20" src="iamge/OpenCV.png" alt="OpenCV" title="OpenCV"></code>
-<code><img height="20" src="iamge/vim.png" alt="Vim" title="Vim"></code>
-<code><img height="20" src="iamge/markdown.png" alt="Markdown" title="MarkDown"></code>
-<code><img height="20" src="iamge/matlab.png" alt="Matlab" title="Matlab"></code>
-<code><img height="20" src="iamge/ubuntu.png" alt="Ubuntu" title="Ubuntu"></code>
-<code><img height="20" src="iamge/macos.png" alt="MacOS" title="MacOS"></code>
-<code><img height="20" src="iamge/linux.png" alt="Linux" title="Linux"></code>
-    
-<br>
-`<code><img height="20" src="iamge/vim.png" alt="Vim" title="Vim">``</code>`
-`<code><img height="20" src="iamge/markdown.png" alt="Markdown" title="MarkDown">``</code>`
-`<code><img height="20" src="iamge/matlab.png" alt="Matlab" title="Matlab">``</code>`
-`<code><img height="20" src="iamge/ubuntu.png" alt="Ubuntu" title="Ubuntu">``</code>`
-`<code><img height="20" src="iamge/macos.png" alt="MacOS" title="MacOS">``</code>`
-`<code><img height="20" src="iamge/linux.png" alt="Linux" title="Linux">``</code>`
-
-<br>
+<code><img height="20" src="image/visual-studio-code.png" alt="VSCode" title="VSCode"></code>
+<code><img height="20" src="image/ARM-keil.png" alt="ARM-Keil" title="ARM-Keil"></code>
+<code><img height="20" src="image/PyCharm.png" alt="PyCharm" title="PyCharm"></code>
+<code><img height="20" src="image/OpenCV.png" alt="OpenCV" title="OpenCV"></code>
+<code><img height="20" src="image/vim.png" alt="Vim" title="Vim"></code>
+<code><img height="20" src="image/markdown.png" alt="Markdown" title="MarkDown"></code>
+<code><img height="20" src="image/matlab.png" alt="Matlab" title="Matlab"></code>
+<code><img height="20" src="image/ubuntu.png" alt="Ubuntu" title="Ubuntu"></code>
+<code><img height="20" src="image/macos.png" alt="MacOS" title="MacOS"></code>
+<code><img height="20" src="image/linux.png" alt="Linux" title="Linux"></code>
