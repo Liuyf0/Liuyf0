@@ -1,6 +1,5 @@
 ### Hi there 👋
 
-<!--
 **Liuyf0/Liuyf0** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
@@ -9,15 +8,40 @@ Here are some ideas to get you started:
 - 🌱 I’m currently learning ...
 - 👯 I’m looking to collaborate on ...
 - 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
+- 💬 Ask me about anything [here](https://github.com/Liuyf0/Liuyf0/issues)
 - 📫 How to reach me: ...
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
--->
+- ❤️ I love ...
 
-<!-- 1、Metrics（GitHub 信息统计） https://metrics.lecoq.io/embed?user=Liuyf0 -->
-![Metrics](https://metrics.lecoq.io/Liuyf0?template=classic&base=header%2C%20activity%2C%20community%2C%20repositories%2C%20metadata&base.indepth=false&base.hireable=false&base.skip=false&config.timezone=Asia%2FShanghai)
+<code><img height="20" alt="javascript" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"></code>
+<code><img height="20" alt="typescript" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png"></code>
+<code><img height="20" alt="react" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"></code>
+<code><img height="20" alt="graphql" src="https://raw.githubusercontent.com/github/explore/5c058a388828bb5fde0bcafd4bc867b5bb3f26f3/topics/graphql/graphql.png"></code>
+<code><img height="20" alt="nodejs" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png"></code>    
 
 
-<!-- 2、GitHub Stats Card（GitHub 统计卡片） https://github.com/anuraghazra/github-readme-stats -->
-<div align="center"> <img height="137px" src="https://github-readme-stats.vercel.app/api?username=Liuyf0&hide_title=true&hide_border=true&show_icons=trueline_height=21&text_color=000&icon_color=000&bg_color=0,ea6161,ffc64d,fffc4d,52fa5a&theme=graywhite" /> </div>
+![Dusai's GitHub stats](https://github-readme-stats.vercel.app/api?username=Liuyf0&show_icons=true&theme=radical)
+
+| <a href="https://github.com/Liuyf0/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api?username=Liuyf0&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true" alt="Anurag's github stats" /></a> | <a href="https://github.com/Liuyf0/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Liuyf0&layout=compact&theme=buefy&hide_border=true" /></a> |
+| ------------- | ------------- |
+
+#### Top Repositories
+
+
+<a href="https://github.com/Liuyf0/github-readme-stats">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Liuyf0&repo=github-readme-stats&theme=buefy" />
+</a>
+<a href="https://github.com/Liuyf0/Liuyf0.github.io">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=Liuyf0&repo=Liuyf0.github.io&theme=buefy" />
+</a>
+
+<br />
+<br />
+
+<a href="https://twitter.com/anuraghazru">
+  <img align="right" alt="Anurag Hazra | Twitter" width="21px" src="https://raw.githubusercontent.com/Liuyf0/Liuyf0/master/assets/twitter.svg" />
+</a>
+<a href="https://codesandbox.io/u/Liuyf0">
+  <img align="right" alt="Anurag Hazra | CodeSandbox" width="20px" src="https://raw.githubusercontent.com/Liuyf0/Liuyf0/master/assets/codesandbox.svg" />
+</a>
