@@ -42,7 +42,6 @@ Here are some ideas to get you started:
 <code><img height="20" src="image/visual-studio-code.png" alt="VSCode" title="VSCode"></code>
 <code><img height="20" src="image/ARM-keil.png" alt="ARM-Keil" title="ARM-Keil"></code>
 <code><img height="20" src="image/PyCharm.png" alt="PyCharm" title="PyCharm"></code>
-<code><img height="20" src="image/OpenCV.png" alt="OpenCV" title="OpenCV"></code>
 <code><img height="20" src="image/vim.png" alt="Vim" title="Vim"></code>
 <code><img height="20" src="image/markdown.png" alt="Markdown" title="MarkDown"></code>
 <code><img height="20" src="image/matlab.png" alt="Matlab" title="Matlab"></code>
