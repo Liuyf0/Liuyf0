@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-**Liuyf0/Liuyf0** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+**NAIUI/NAIUI** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
 
@@ -8,17 +8,17 @@ Here are some ideas to get you started:
 - 🌱 I’m currently learning ...
 - 👯 I’m looking to collaborate on ...
 - 🤔 I’m looking for help with ...
-- 💬 Ask me about anything [here](https://github.com/Liuyf0/Liuyf0/issues)
+- 💬 Ask me about anything [here](https://github.com/NAIUI/NAIUI/issues)
 - 📫 How to reach me: ...
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 - ❤️ I love ... 
 
 <!--
-![Dusai's GitHub stats](https://github-readme-stats.vercel.app/api?username=Liuyf0&show_icons=true&theme=radical)
+![Dusai's GitHub stats](https://github-readme-stats.vercel.app/api?username=NAIUI&show_icons=true&theme=radical)
 -->
 
-| <a href="https://github.com/Liuyf0/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api?username=Liuyf0&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true" alt="Anurag's github stats" /></a> | <a href="https://github.com/Liuyf0/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Liuyf0&layout=compact&theme=buefy&hide_border=true" /></a> |
+| <a href="https://github.com/NAIUI/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api?username=NAIUI&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true" alt="Anurag's github stats" /></a> | <a href="https://github.com/NAIUI/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=NAIUI&layout=compact&theme=buefy&hide_border=true" /></a> |
 | ------------- | ------------- |
 
 <img align="right" alt="GIF" src="image/code.gif" width="343" height="220" title="Do what you like, and do it best!"> &nbsp;&nbsp;&nbsp;&nbsp;
