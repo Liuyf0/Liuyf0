@@ -18,13 +18,13 @@ Here are some ideas to get you started:
 </h1>
 
 <p align="center">
-    <b><a href="https://github.com/rust-lang/rust">Rustacean</a></b>
+    <b><a href="https://github.com/grpc/grpc)">gRPC</a></b>
     •
-    <b><a href="https://github.com/golang/go">Gopher</a></b>
+    <b><a href="https://github.com/torvalds/linux">Linux</a></b>
     •
-    <b><a href="https://github.com/neovim/neovim">(Neo)Vimer</a></b>
+    <b><a href="https://github.com/redis/redis">(Neo)redis</a></b>
     •
-    <b><a href="https://younger-1.github.io/fastpages/">Blogs</a></b>
+    <b><a href="https://NAIUI.github.io/">Blogs</a></b>
     <!-- •<b><a href="7650421@qq.com">Email</a></b> -->
     <!-- •<b><a href="https://www.paypal.me/younger">Sponsor</a></b> -->
 </p>
@@ -33,12 +33,6 @@ Here are some ideas to get you started:
     <a href="https://www.rust-lang.org/"> <img src="https://img.shields.io/badge/rust-d07f4f.svg?&style=for-the-badge&logo=rust&logoColor=white"/> </a>
     <a href="https://golang.org/"> <img src="https://img.shields.io/badge/go-00ADD8.svg?&style=for-the-badge&logo=go&logoColor=white"/> </a>
     <a href="https://elixir-lang.org/"> <img src="https://img.shields.io/badge/elixir-9a3ea8?style=for-the-badge&logo=elixir&logoColor=white"/> </a>
-<!--     <a href="https://www.python.org/"> <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" /> </a> -->
-<!--     <a href="https://www.lua.org/"> <img src="https://img.shields.io/badge/lua-2C2D72.svg?&style=for-the-badge&logo=lua&logoColor=white"/> </a> -->
-<!--     <a href="https://www.typescriptlang.org/"> <img src="https://img.shields.io/badge/typescript-007ACC.svg?&style=for-the-badge&logo=typescript&logoColor=white"/> </a> -->
-<!--     <a href="https://www.haskell.org/">  <img src="https://img.shields.io/badge/haskell-5D4F85?style=for-the-badge&logo=haskell&logoColor=white" alt="Haskell" /> </a> -->
-    <a href="https://crystal-lang.org/"> <img src="https://img.shields.io/badge/crystal-000000?style=for-the-badge&logo=crystal&logoColor=white"/> </a>
-<!--     <a href="https://www.ruby-lang.org/"> <img src="https://img.shields.io/badge/ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white" alt="Ruby" /> </a> -->
 </p>
 
 <p align="center">
@@ -50,12 +44,13 @@ Here are some ideas to get you started:
 
 
 
-
+<!--
 <div align="center">
   <img src="https://octodex.github.com/images/justicetocat.jpg" width="320" height="320">
 <!--   <img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" width="320" height="320"> -->
 <!--   <img src="https://octodex.github.com/images/daftpunktocat-guy.gif" width="320" height="320">  -->
 </div>
+-->
 
 
 <!--
