@@ -94,4 +94,4 @@ Here are some ideas to get you started:
 <code><img height="20" width="22" src="image/everything.png" alt="everything" title="everything"></code>
 
 ## 🏆 Github Profile Trophy
-<img src="https://github-profile-trophy.vercel.app/?username=NAIUI1&column=8"/>
+<img src="https://github-profile-trophy.vercel.app/?username=NAIUI1"/>
