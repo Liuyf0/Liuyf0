@@ -25,7 +25,7 @@ Here are some ideas to get you started:
     <b><a href="https://github.com/redis/redis">redis</a></b>
     •
     <b><a href="https://NAIUI.github.io/">Blogs</a></b>
-    <!-- •<b><a href="7650421@qq.com">Email</a></b> -->
+    <!-- •<b><a href="lingh9@foxmail.com">Email</a></b> -->
     <!-- •<b><a href="https://www.paypal.me/younger">Sponsor</a></b> -->
 </p>
 
