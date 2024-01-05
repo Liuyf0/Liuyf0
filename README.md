@@ -24,7 +24,7 @@ Here are some ideas to get you started:
     •    
     <b><a href="https://github.com/grpc/grpc)">gRPC</a></b>
     •
-    <b><a href="https://NAIUI.github.io/">Blog</a></b>
+    <b><a href="https://github.com/clangd/vscode-clangd/">Clangd</a></b>
     <!-- •<b><a href="lingh9@foxmail.com">Email</a></b> -->
     <!-- •<b><a href="https://www.paypal.me/younger">Sponsor</a></b> -->
 </p>
