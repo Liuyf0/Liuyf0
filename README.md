@@ -18,28 +18,28 @@ Here are some ideas to get you started:
 </h1>
 
 <p align="center">
-    <b><a href="https://github.com/grpc/grpc)">gRPC</a></b>
-    •
     <b><a href="https://github.com/torvalds/linux">Linux</a></b>
     •
     <b><a href="https://github.com/redis/redis">redis</a></b>
+    •    
+    <b><a href="https://github.com/grpc/grpc)">gRPC</a></b>
     •
-    <b><a href="https://NAIUI.github.io/">Blogs</a></b>
+    <b><a href="https://NAIUI.github.io/">Blog</a></b>
     <!-- •<b><a href="lingh9@foxmail.com">Email</a></b> -->
     <!-- •<b><a href="https://www.paypal.me/younger">Sponsor</a></b> -->
 </p>
 
-<p align="center">
-    <a href="https://www.rust-lang.org/"> <img src="https://img.shields.io/badge/rust-d07f4f.svg?&style=for-the-badge&logo=rust&logoColor=white"/> </a>
-    <a href="https://golang.org/"> <img src="https://img.shields.io/badge/go-00ADD8.svg?&style=for-the-badge&logo=go&logoColor=white"/> </a>
-    <a href="https://elixir-lang.org/"> <img src="https://img.shields.io/badge/elixir-9a3ea8?style=for-the-badge&logo=elixir&logoColor=white"/> </a>
+<p align="center">    
+    <a href="https://en.cppreference.com/w/"> <img src="https://img.shields.io/badge/Cpp-9a3ea8?style=for-the-badge&logo=elixir&logoColor=white"/> </a>
+    <a href="https://golang.org/"> <img src="https://img.shields.io/badge/Go-00ADD8.svg?&style=for-the-badge&logo=go&logoColor=white"/> </a>
+    <a href="https://www.rust-lang.org/"> <img src="https://img.shields.io/badge/Rust-d07f4f.svg?&style=for-the-badge&logo=rust&logoColor=white"/> </a>
 </p>
 
 <p align="center">
     <a href="https://neovim.io/"> <img src="https://img.shields.io/badge/neovim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white"/> </a>
     <a href="https://www.archlinux.org/"> <img src="https://img.shields.io/badge/arch-%231793d1.svg?&style=for-the-badge&logo=arch-linux&logoColor=white"/> </a>
     <a href=""> <img src="https://img.shields.io/badge/win10-%23008080.svg?&style=for-the-badge&logo=windows&logoColor=white"/> </a>
-    <a href="https://github.com/Microsoft/Terminal/"> <img src="https://img.shields.io/badge/wt-%234d4d4d.svg?&style=for-the-badge&logo=windows-terminal&logoColor=white"/> </a>
+    <a href="https://github.com/Microsoft/Terminal/"> <img src="https://img.shields.io/badge/Terminal-%234d4d4d.svg?&style=for-the-badge&logo=windows-terminal&logoColor=white"/> </a>
 </p>
 
 
@@ -57,7 +57,7 @@ Here are some ideas to get you started:
 ![Dusai's GitHub stats](https://github-readme-stats.vercel.app/api?username=NAIUI&show_icons=true&theme=radical)
 -->
 
-| <a href="[https://github.com/NAIUI/github-readme-stats](https://github-readme-stats.vercel.app/api?username=NAIUI&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true&count_private=true)"><img align="center" src="https://github-readme-stats.vercel.app/api?username=NAIUI&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true&count_private=true" alt="Anurag's github stats" /></a> | <a href="[https://github.com/NAIUI/github-readme-stats](https://github-readme-stats.vercel.app/api/top-langs/?username=NAIUI&layout=compact&theme=buefy&hide_border=true)"><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=NAIUI&layout=compact&theme=buefy&hide_border=true" /></a> |
+| <a href="[https://github.com/NAIUI/github-readme-stats](https://github-readme-stats.vercel.app/api?username=NAIUI&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true&count_private=true)"><img align="center" src="https://github-readme-stats.vercel.app/api?username=NAIUI&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true&count_private=true" alt="Anurag's github stats" /></a> | <a href="[https://github.com/NAIUI/github-readme-stats](https://github-readme-stats.vercel.app/api/top-langs/?username=NAIUI&layout=compact&theme=buefy&hide_border=true&langs_count=8)"><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=NAIUI&layout=compact&theme=buefy&hide_border=true&langs_count=8" /></a> |
 | ------------- | ------------- |
 
 <img align="right" alt="GIF" src="image/code.gif" width="343" height="220" title="Do what you like, and do it best!"> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -90,6 +90,3 @@ Here are some ideas to get you started:
 
 ## 🏆 Github Profile Trophy
 <img src="https://github-profile-trophy.vercel.app/?username=NAIUI&column=8"/>
-
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=NAIUI&repo=JSON_Lib)](https://github.com/NAIUI/JSON_Lib)
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=NAIUI&repo=HttpServer)](https://github.com/NAIUI/HttpServer)
