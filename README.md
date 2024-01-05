@@ -57,7 +57,7 @@ Here are some ideas to get you started:
 ![Dusai's GitHub stats](https://github-readme-stats.vercel.app/api?username=NAIUI&show_icons=true&theme=radical)
 -->
 
-| <a href="https://github.com/NAIUI/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api?username=NAIUI&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true" alt="Anurag's github stats" /></a> | <a href="https://github.com/NAIUI/github-readme-stats"><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=NAIUI&layout=compact&theme=buefy&hide_border=true" /></a> |
+| <a href="[https://github.com/NAIUI/github-readme-stats](https://github-readme-stats.vercel.app/api?username=NAIUI&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true&count_private=true)"><img align="center" src="https://github-readme-stats.vercel.app/api?username=NAIUI&show_icons=true&include_all_commits=true&theme=buefy&hide_border=true&count_private=true" alt="Anurag's github stats" /></a> | <a href="[https://github.com/NAIUI/github-readme-stats](https://github-readme-stats.vercel.app/api/top-langs/?username=NAIUI&layout=compact&theme=buefy&hide_border=true)"><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=NAIUI&layout=compact&theme=buefy&hide_border=true" /></a> |
 | ------------- | ------------- |
 
 <img align="right" alt="GIF" src="image/code.gif" width="343" height="220" title="Do what you like, and do it best!"> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -90,3 +90,6 @@ Here are some ideas to get you started:
 
 ## 🏆 Github Profile Trophy
 <img src="https://github-profile-trophy.vercel.app/?username=NAIUI&column=8"/>
+
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=NAIUI&repo=JSON_Lib)](https://github.com/NAIUI/JSON_Lib)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=NAIUI&repo=HttpServer)](https://github.com/NAIUI/HttpServer)
